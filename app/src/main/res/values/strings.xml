@@ -1,3 +1,120 @@
 <resources>
-    <string name="app_name">rawDB</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="app_name">RegisterPage</string>
+
+    <string name="registerAsPatient">Register as Patient</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="middleName">Middle Name</string>
+    <string name="dateOfBirth">Date of Birth</string>
+    <string name="dateOfBirth2">MM/DD/YY</string>
+    <string name="phoneNumber">1st Phone Number</string>
+    <string name="phoneNumber2">2nd Phone Number</string>
+    <string name="emailAddress">Email</string>
+    <string name="address">Address</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+
+    <string name="nextPage">Next Page >></string>
+
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="bloodType">Blood Type</string>
+    <string name="medicalHistory">Medical History</string>
+    <string name="allergies">Allergies</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="registerAsDoctor">Register as Doctor</string>
+    <string name="specialization">Specialization</string>
+
+    <string name="doctor">Doctors</string>
+    <string name="patient">Patients</string>
+    <string name="schedule">Schedules</string>
+    <string name="inbox">Inbox</string>
+
+    <string name="welcome">Hi! How may  we assist you today?</string>
+    <string name="hint1">Please click on the words above for navigation.</string>
+
+    <string name="doctorName1">Aldrin John A. Vitorillo</string>
+    <string name="doctorName2">Justin Alexander A. Labajos</string>
+    <string name="doctorName3">Ben David C. Cadayona</string>
+    <string name="doctorName4">Ezekiel Gil T. Saludsod</string>
+
+    <string name="specialization1">Specialization: Neurosurgeon, Surgeon</string>
+    <string name="specialization2">Specialization: Cardiac Surgery, Cardiologist</string>
+    <string name="specialization3">Specialization: Plastic Surgeon, Psychiatrist</string>
+    <string name="specialization4">Specialization: Radiologist, Gynecologist</string>
+
+    <string name="availability1">Schedule: Monday, Tuesday (9 am to 5 pm)</string>
+    <string name="availability2">Schedule: Wednesday (9 am to 5 pm)</string>
+    <string name="availability3">Schedule: Thursday, Friday (9 am to 5 pm)</string>
+    <string name="availability4">Schedule: Saturday, Sunday (9 am to 5 pm)</string>
+
+    <string name="price1">Starting Price: $150 - $300</string>
+    <string name="price2">Starting Price: $100 - $400</string>
+    <string name="price3">Starting Price: $200 - $350</string>
+    <string name="price4">Starting Price: $300 - $800</string>
+
+    <string name="quote1">\"Even the best fall down sometimes...\"</string>
+    <string name="quote2">\"Nothing nice gets left for the restful!\"</string>
+    <string name="quote3">\"Noodles are straight too, until you get them wet.\"</string>
+    <string name="quote4">\"All the tools, at my disposal.\"</string>
+
+    <string name="medicalCondition">Medical Condition/s:</string>
+
+    <string name="age1">20 y.o.</string>
+    <string name="age2">23 y.o.</string>
+    <string name="age3">20 y.o.</string>
+    <string name="age4">19 y.o.</string>
+
+    <string name="bloodType1">O+</string>
+    <string name="bloodType2">O+</string>
+    <string name="bloodType3">O+</string>
+    <string name="bloodType4">O+</string>
+
+    <string name="phoneNum1">+63 123 456 7890</string>
+    <string name="phoneNum2">+63 956 726 8101</string>
+    <string name="phoneNum3">+63 977 426 7589</string>
+    <string name="phoneNum4">+63 976 099 2209</string>
+
+    <string name="patientName1">Pablo Escobar</string>
+    <string name="patientName2">Jeffrey Dahmer</string>
+    <string name="patientName3">Osama Bin Laden</string>
+    <string name="patientName4">Cardo Dalisay</string>
+
+    <string name="condition1">Has been diagnosed with hypertension, a condition characterized by high blood pressure that can increase the risk of heart disease and stroke.</string>
+    <string name="condition2">Struggles with asthma, a chronic respiratory condition that causes difficulty in breathing due to inflamed airways, often triggered by allergens or exercise.</string>
+    <string name="condition3">Manages diabetes mellitus, a metabolic disorder where the body struggles to regulate blood sugar levels, requiring careful monitoring of diet and insulin intake.</string>
+    <string name="condition4">Experiences frequent migraine headaches, intense and debilitating episodes often accompanied by nausea, sensitivity to light, and visual disturbances.</string>
+
+    <string name="welcomeName">Hello, Doctor </string>
+    <string name="newRecord">Add New Record </string>
+    <string name="chooseRecipients">Choose Recipients: </string>
+
+    <string name="recipient1">Recipient 1</string>
+    <string name="recipient2">Recipient 2</string>
+    <string name="recipient3">Recipient 3</string>
+    <string name="recipient4">Recipient 4</string>
+    <string name="recipient5">Recipient 5</string>
+    <string name="recipient6">Recipient 6</string>
+
+    <string name="cancel">Cancel </string>
+    <string name="confirm">Confirm </string>
+    <string name="backToHome">Back To Home </string>
+    <string name="prescriptionSent">Prescription Sent! </string>
+
+    <string name="tenPM">10:00 PM</string>
+    <string name="sevenThirtyTwoAM">7:32 AM</string>
+    <string name="selectPatient">Select Patients: </string>
 </resources>

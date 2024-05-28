@@ -3,6 +3,7 @@ package com.example.rawdb;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ public class AddActivity extends AppCompatActivity {
 
     EditText title_input, author_input, pages_input;
     Button add_button;
+    MainActivity main;
 
 
     @Override
@@ -27,7 +29,6 @@ public class AddActivity extends AppCompatActivity {
         add_button = findViewById(R.id.add_button);
 
 
-
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,9 +36,12 @@ public class AddActivity extends AppCompatActivity {
                 myDB.addBook(title_input.getText().toString().trim(),
                         author_input.getText().toString().trim(),
                         Integer.valueOf(pages_input.getText().toString().trim()));
+                startActivity(new Intent(AddActivity.this, Dashboard_Act    .class));
                 finish();
 
             }
+
+
         });
     }
 }
