@@ -47,8 +47,6 @@ public class Login_RegisterAct extends AppCompatActivity implements Serializable
         loginReg = new Login_RegisterAct();
 
 
-
-
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -28,6 +28,9 @@ public class AddActivity extends AppCompatActivity {
         pages_input = findViewById(R.id.pages_input);
         add_button = findViewById(R.id.add_button);
 
+        Intent myIntent = getIntent();
+        User userpassed = (User) myIntent.getSerializableExtra("object");
+
 
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +39,10 @@ public class AddActivity extends AppCompatActivity {
                 myDB.addBook(title_input.getText().toString().trim(),
                         author_input.getText().toString().trim(),
                         Integer.valueOf(pages_input.getText().toString().trim()));
-                startActivity(new Intent(AddActivity.this, Dashboard_Act    .class));
+                Intent intent = new Intent(AddActivity.this, Dashboard_Act.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+
                 finish();
 
             }
