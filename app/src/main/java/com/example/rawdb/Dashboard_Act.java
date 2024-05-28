@@ -36,14 +36,16 @@ public class Dashboard_Act extends AppCompatActivity {
         myDB = new MyDatabaseHelper(Dashboard_Act.this);
         patientList = findViewById(R.id.viewPatientsBtn);
 
-
-
-        patientCount =findViewById(R.id.textView17);
-        //`patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
         Intent myIntent = getIntent();
         User userpassed = (User) myIntent.getSerializableExtra("object");
 
         userpassed.testUserMethod(this);
+        doctorname = userpassed.getUsername();
+
+
+        patientCount =findViewById(R.id.textView17);
+        patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
+
 
         //userpassed.testUserMethod(this,userpassed.getUsername());
         welcomeText = findViewById(R.id.editTextName);

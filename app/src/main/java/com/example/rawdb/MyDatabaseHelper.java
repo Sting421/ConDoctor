@@ -90,15 +90,16 @@
         }
 
         Cursor readAllData(String username) {
-            String query = "SELECT * FROM " + TABLE_NAME ;
+            String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_AUTHOR + " = ?";
             SQLiteDatabase db = this.getReadableDatabase();
 
             Cursor cursor = null;
             if (db != null) {
-                cursor = db.rawQuery(query, null);
+                cursor = db.rawQuery(query, new String[]{username});
             }
             return cursor;
         }
+
 
 
         void updateData(String row_id, String title, String author, String pages){
@@ -126,17 +127,21 @@
                 Toast.makeText(context, "Successfully Deleted.", Toast.LENGTH_SHORT).show();
             }
         }
-        public int patientCounter(String doctorname){
+        public int patientCounter(String doctorname) {
             int count = 0;
             SQLiteDatabase db = this.getReadableDatabase();
-            String query = "SELECT * FROM " + TABLE_NAME + " WHERE doctor = ?";
+            String query = "SELECT * FROM " + TABLE_NAME + " WHERE "+COLUMN_AUTHOR+" = ?";
             Cursor cursor = db.rawQuery(query, new String[]{doctorname});
 
-            cursor.close();
+            if (cursor != null) {
+                count = cursor.getCount();
+                cursor.close();
+            }
             db.close();
 
-            return cursor.getCount();
+            return count;
         }
+
 
         void deleteAllData(){
             SQLiteDatabase db = this.getWritableDatabase();

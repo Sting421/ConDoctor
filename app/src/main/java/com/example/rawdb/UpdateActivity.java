@@ -17,7 +17,6 @@ public class UpdateActivity extends AppCompatActivity {
 
     EditText title_input, author_input, pages_input;
     Button update_button, delete_button;
-
     String id, title, author, pages;
 
     @Override

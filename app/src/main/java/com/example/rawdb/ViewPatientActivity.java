@@ -36,6 +36,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     MyDatabaseHelper myDB;
     ArrayList<String> book_id, book_title, book_author, book_pages;
     CustomAdapter customAdapter;
+    User userpassed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class ViewPatientActivity extends AppCompatActivity {
         no_data = findViewById(R.id.no_data);
         backBtn = findViewById(R.id.backBtn);
         Intent myIntent = getIntent();
-        User userpassed = (User) myIntent.getSerializableExtra("object");
+         userpassed = (User) myIntent.getSerializableExtra("object");
 
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +107,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     }
 
     void storeDataInArrays(){
-        Cursor cursor = myDB.readAllData("inong");
+        Cursor cursor = myDB.readAllData(userpassed.getUsername());
         if(cursor.getCount() == 0){
             empty_imageview.setVisibility(View.VISIBLE);
             no_data.setVisibility(View.VISIBLE);
