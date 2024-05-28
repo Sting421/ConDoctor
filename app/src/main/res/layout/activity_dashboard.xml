@@ -88,7 +88,7 @@
 
             <TextView
                 android:id="@+id/welcomeText"
-                android:layout_width="435dp"
+                android:layout_width="160dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
@@ -98,14 +98,14 @@
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextName"
-                android:layout_width="408dp"
-                android:layout_height="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="24sp" />
+                android:paddingVertical="22sp"
+                android:text="TextView"
+                android:textSize="34sp" />
 
         </LinearLayout>
 

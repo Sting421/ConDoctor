@@ -16,9 +16,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Dashboard_Act extends AppCompatActivity {
     ImageButton patientList;
-    TextView patientCount;
+    TextView patientCount,welcomeText;
 
     MyDatabaseHelper myDB;
+
+
     String doctorname = "";
 
     @Override
@@ -36,11 +38,12 @@ public class Dashboard_Act extends AppCompatActivity {
 
         patientCount =findViewById(R.id.textView17);
         Intent myIntent = getIntent();
-   //`     patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
+      //  patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
         User userpassed = (User) myIntent.getSerializableExtra("object");
 
-        userpassed.testUserMethod(this);
-
+        //userpassed.testUserMethod(this,userpassed.getUsername());
+        welcomeText = findViewById(R.id.editTextName);
+        welcomeText.setText(userpassed.getUsername());
         patientList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
