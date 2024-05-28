@@ -78,7 +78,7 @@
             <TextView
                 android:id="@+id/welcomeText"
 
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
@@ -94,9 +94,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:paddingVertical="22sp"
-                android:text="TextView"
-                android:textSize="34sp" />
+                android:text="@string/doctorName"
+                android:textColor="#333333"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -113,18 +116,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.37">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="104dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center|left"
-                android:text="@string/doctorName"
-                android:textColor="#333333"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+            
 
         </LinearLayout>
         <LinearLayout android:id="@+id/linearLayout5" android:layout_width="404dp" android:layout_height="104dp" android:layout_weight="1" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.666" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.37">

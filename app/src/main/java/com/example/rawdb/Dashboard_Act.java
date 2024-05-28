@@ -43,7 +43,7 @@ public class Dashboard_Act extends AppCompatActivity {
 
         //userpassed.testUserMethod(this,userpassed.getUsername());
         welcomeText = findViewById(R.id.editTextName);
-        welcomeText.setText(userpassed.getUsername());
+        welcomeText.setText(userpassed.getUsername().toUpperCase());
         patientList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

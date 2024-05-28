@@ -16,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.Serializable;
 
-public class Login_RegisterAct extends AppCompatActivity {
+public class Login_RegisterAct extends AppCompatActivity implements Serializable{
 
 
     FloatingActionButton registerButton, loginButton;
@@ -24,6 +24,7 @@ public class Login_RegisterAct extends AppCompatActivity {
 
     MyDatabaseHelper myDB;
     User user;
+    Login_RegisterAct loginReg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,9 @@ public class Login_RegisterAct extends AppCompatActivity {
         registerButton = findViewById(R.id.registerBtn);
         loginButton = findViewById(R.id.loginBtn);
         user = new User();
+        loginReg = new Login_RegisterAct();
+
+
 
 
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +75,7 @@ public class Login_RegisterAct extends AppCompatActivity {
                         Intent intent = new Intent(Login_RegisterAct.this,Dashboard_Act.class);
                         intent.putExtra("username_key",username.getText());
                         intent.putExtra("object", user);
+                        intent.putExtra("login", loginReg);
                       //  Toast.makeText(Login_RegisterAct.this, tfUsername, Toast.LENGTH_SHORT).show();
                         startActivity(intent);
 
