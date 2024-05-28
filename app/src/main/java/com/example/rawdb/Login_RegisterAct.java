@@ -68,12 +68,15 @@ public class Login_RegisterAct extends AppCompatActivity implements Serializable
                 //with db
                 if(String.valueOf(username.getText()).isEmpty() && String.valueOf(username.getText()).isEmpty()){
                     Toast.makeText(Login_RegisterAct.this, "All Fields must be fill!", Toast.LENGTH_SHORT).show();
+
                 }else{
-                        String tfUsername = String.valueOf(username.getText());
+
                     if(myDB.userChecker(String.valueOf(username.getText()), String.valueOf(password.getText()))){
-                       user.setUsername(tfUsername);
+                        user.username = String.valueOf(username.getText());
                         Intent intent = new Intent(Login_RegisterAct.this,Dashboard_Act.class);
                         intent.putExtra("username_key",username.getText());
+                        intent.putExtra("object", (Serializable) user);
+                        //Toast.makeText(Login_RegisterAct.this, username.getText(), Toast.LENGTH_SHORT).show();
                         intent.putExtra("object", user);
                         intent.putExtra("login", loginReg);
                       //  Toast.makeText(Login_RegisterAct.this, tfUsername, Toast.LENGTH_SHORT).show();

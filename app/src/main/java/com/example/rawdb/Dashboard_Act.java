@@ -16,11 +16,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Dashboard_Act extends AppCompatActivity {
     ImageButton patientList;
-    TextView patientCount,welcomeText;
+    TextView patientCount;
 
     MyDatabaseHelper myDB;
-
-
     String doctorname = "";
 
     @Override
@@ -34,12 +32,14 @@ public class Dashboard_Act extends AppCompatActivity {
             return insets;
         });
         myDB = new MyDatabaseHelper(Dashboard_Act.this);
-        patientList = findViewById(R.id.viewPatient);
+        patientList = findViewById(R.id.viewImageBtn);
 
         patientCount =findViewById(R.id.textView17);
         Intent myIntent = getIntent();
-      //  patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
+   //`     patientCount.setText(myDB.patientCounter(doctorname) + " Patient Appointments");
         User userpassed = (User) myIntent.getSerializableExtra("object");
+
+        userpassed.testUserMethod(this);
 
         //userpassed.testUserMethod(this,userpassed.getUsername());
         welcomeText = findViewById(R.id.editTextName);
