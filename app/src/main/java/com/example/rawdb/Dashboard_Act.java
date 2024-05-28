@@ -34,7 +34,7 @@ public class Dashboard_Act extends AppCompatActivity {
             return insets;
         });
         myDB = new MyDatabaseHelper(Dashboard_Act.this);
-        patientList = findViewById(R.id.viewImageBtn);
+        patientList = findViewById(R.id.viewPatient);
 
         patientCount =findViewById(R.id.textView17);
         Intent myIntent = getIntent();
