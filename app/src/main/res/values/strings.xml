@@ -1,14 +1,4 @@
 <resources>
-
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-
     <string name="app_name">RegisterPage</string>
 
     <string name="registerAsPatient">Register as Patient</string>
@@ -99,6 +89,7 @@
     <string name="condition4">Experiences frequent migraine headaches, intense and debilitating episodes often accompanied by nausea, sensitivity to light, and visual disturbances.</string>
 
     <string name="welcomeName">Hello, Doctor </string>
+    <string name="doctorName">doctorName </string>
     <string name="newRecord">Add New Record </string>
     <string name="chooseRecipients">Choose Recipients: </string>
 
@@ -112,9 +103,19 @@
     <string name="cancel">Cancel </string>
     <string name="confirm">Confirm </string>
     <string name="backToHome">Back To Home </string>
+    <string name="backOne">Back </string>
     <string name="prescriptionSent">Prescription Sent! </string>
 
     <string name="tenPM">10:00 PM</string>
     <string name="sevenThirtyTwoAM">7:32 AM</string>
     <string name="selectPatient">Select Patients: </string>
+
+    <string name="userProfile">Your Profile: </string>
+    <string name="user">Username: </string>
+    <string name="fname">First name: </string>
+    <string name="mname">Middle name: </string>
+    <string name="lname">Last name: </string>
+    <string name="bdate">Birth Date: </string>
+    <string name="specializationProfile">Specialization: </string>
+
 </resources>
