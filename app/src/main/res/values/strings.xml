@@ -118,4 +118,6 @@
     <string name="bdate">Birth Date: </string>
     <string name="specializationProfile">Specialization: </string>
 
+    <string name="viewPatients">View Patients </string>
+
 </resources>

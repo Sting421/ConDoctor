@@ -100,19 +100,6 @@
                 android:textStyle="bold" />
 
 
-            <TextView
-                android:id="@+id/editTextName"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center"
-                android:text="@string/doctorName"
-                android:textColor="#333333"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -135,13 +122,26 @@
 
             <TextView
                 android:id="@+id/textView17"
-                android:layout_width="273dp"
+                android:layout_width="202dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="4 Patient Appointments"
+                android:text="{i} Patient Appointments"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="165dp"
+                android:layout_height="104dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/viewPatients"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
             <ImageButton android:id="@+id/viewPatientsBtn" android:layout_width="143dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:src="@drawable/addicon"/>
         </LinearLayout>
 
