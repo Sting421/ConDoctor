@@ -25,7 +25,7 @@
             app:layout_constraintHorizontal_bias="0.36"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26999998"
+            app:layout_constraintVertical_bias="0.50"
             app:srcCompat="@drawable/bluebg" />
 
         <TextClock
@@ -116,9 +116,20 @@
             app:layout_constraintVertical_bias="0.37">
 
 
-
         </LinearLayout>
-        <LinearLayout android:id="@+id/linearLayout5" android:layout_width="404dp" android:layout_height="104dp" android:layout_weight="1" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.666" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.37">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="404dp"
+            android:layout_height="104dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.37">
 
             <TextView
                 android:id="@+id/textView17"
@@ -142,10 +153,17 @@
                 android:textColor="#333333"
                 android:textSize="18sp" />
 
-            <ImageButton android:id="@+id/viewPatientsBtn" android:layout_width="143dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:src="@drawable/addicon"/>
+            <ImageButton
+                android:id="@+id/viewPatientsBtn"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/addicon" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout6"
             android:layout_width="416dp"
             android:layout_height="166dp"
             android:orientation="horizontal"
@@ -153,7 +171,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.72">
+            app:layout_constraintVertical_bias="0.60">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -191,14 +209,144 @@
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
-        <LinearLayout android:layout_width="416dp" android:layout_height="93dp" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0">
-            <TextView android:id="@+id/textViewOnClickDoctors" android:layout_width="35dp" android:layout_height="match_parent" android:layout_weight="1" android:fontFamily="sans-serif-condensed-medium" android:gravity="center" android:text="@string/doctor" android:textAlignment="center" android:textSize="20sp"/>
-            <View android:id="@+id/divider01" android:layout_width="1dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/listDivider"/>
-            <TextView android:id="@+id/textViewOnClickPatients" android:layout_width="40dp" android:layout_height="match_parent" android:layout_weight="1" android:fontFamily="sans-serif-condensed-medium" android:gravity="center" android:text="@string/patient" android:textAlignment="center" android:textSize="20sp"/>
-            <View android:id="@+id/divider02" android:layout_width="1dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/listDivider"/>
-            <TextView android:id="@+id/textViewOnClickSchedules" android:layout_width="64dp" android:layout_height="match_parent" android:layout_weight="1" android:fontFamily="sans-serif-condensed-medium" android:gravity="center" android:text="@string/schedule" android:textAlignment="center" android:textSize="20sp"/>
-            <View android:id="@+id/divider03" android:layout_width="1dp" android:layout_height="match_parent" android:layout_weight="1" android:background="?android:attr/listDivider"/>
-            <TextView android:id="@+id/textViewOnClickInbox" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1" android:fontFamily="sans-serif-condensed-medium" android:gravity="center" android:text="@string/inbox" android:textAlignment="center" android:textSize="20sp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="407dp"
+            android:layout_height="283dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Recent News"
+                android:textSize="36sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="#80FFFFFF"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/shocked" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center|left"
+                            android:text="@string/news1"
+                            android:textSize="26sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="#80FFFFFF"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/kidvaccine" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center|left"
+                            android:text="@string/news2"
+                            android:textSize="26sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="#80FFFFFF"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/hightemp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center|left"
+                            android:text="@string/news3"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="#80FFFFFF"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/emergencyroom" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center|left"
+                            android:text="@string/news4"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
