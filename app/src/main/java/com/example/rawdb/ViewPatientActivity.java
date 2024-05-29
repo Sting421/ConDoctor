@@ -34,7 +34,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     int curCount = 0;
 
     MyDatabaseHelper myDB;
-    ArrayList<String> book_id, book_title, book_author, book_pages;
+    ArrayList<String> patient_id, patient_name, patient_age, patient_gender,patient_condition;
     CustomAdapter customAdapter;
     User userpassed;
 
@@ -84,15 +84,16 @@ public class ViewPatientActivity extends AppCompatActivity {
         });
 
         myDB = new MyDatabaseHelper(ViewPatientActivity.this);
-        book_id = new ArrayList<>();
-        book_title = new ArrayList<>();
-        book_author = new ArrayList<>();
-        book_pages = new ArrayList<>();
+        patient_id = new ArrayList<>();
+        patient_name = new ArrayList<>();
+        patient_age = new ArrayList<>();
+        patient_gender = new ArrayList<>();
+        patient_condition = new ArrayList<>();
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(ViewPatientActivity.this,this, book_id, book_title, book_author,
-                book_pages);
+        customAdapter = new CustomAdapter(ViewPatientActivity.this,this, patient_id, patient_name, patient_age,
+                patient_gender,patient_condition);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(ViewPatientActivity.this));
 
@@ -114,10 +115,11 @@ public class ViewPatientActivity extends AppCompatActivity {
         }else{
             cursor.move(curCount);
             while (cursor.moveToNext()){
-                book_id.add(cursor.getString(0));
-                book_title.add(cursor.getString(1));
-                book_author.add(cursor.getString(2));
-                book_pages.add(cursor.getString(3));
+                patient_id.add(cursor.getString(0));
+                patient_name.add(cursor.getString(1));
+                patient_age.add(cursor.getString(2));
+                patient_gender.add(cursor.getString(3));
+                patient_condition.add(cursor.getString(4));
                 curCount++;
             }
             empty_imageview.setVisibility(View.GONE);

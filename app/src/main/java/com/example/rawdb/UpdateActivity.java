@@ -17,7 +17,7 @@ public class UpdateActivity extends AppCompatActivity {
 
     EditText title_input, author_input, pages_input;
     Button update_button, delete_button;
-    String id, title, author, pages;
+    String id, title, author, pages, condition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +65,10 @@ public class UpdateActivity extends AppCompatActivity {
                 getIntent().hasExtra("author") && getIntent().hasExtra("pages")){
             //Getting Data from Intent
             id = getIntent().getStringExtra("id");
-            title = getIntent().getStringExtra("title");
-            author = getIntent().getStringExtra("author");
-            pages = getIntent().getStringExtra("pages");
+            title = getIntent().getStringExtra("name");
+            author = getIntent().getStringExtra("age");
+            pages = getIntent().getStringExtra("gender");
+            condition = getIntent().getStringExtra("condition");
 
             //Setting Intent Data
             title_input.setText(title);

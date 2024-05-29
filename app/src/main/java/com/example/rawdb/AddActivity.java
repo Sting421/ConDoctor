@@ -13,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class AddActivity extends AppCompatActivity {
 
-    EditText title_input, author_input, pages_input;
+    EditText tfName, tfAge, tfGender,tfCondition;
     Button add_button;
     MainActivity main;
 
@@ -23,9 +23,10 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        title_input = findViewById(R.id.title_input);
-        author_input = findViewById(R.id.author_input);
-        pages_input = findViewById(R.id.pages_input);
+        tfName = findViewById(R.id.tfName);
+        tfAge = findViewById(R.id.tfAge);
+        tfGender = findViewById(R.id.tfGender);
+        tfCondition = findViewById(R.id.tfCondition);
         add_button = findViewById(R.id.add_button);
 
         Intent myIntent = getIntent();
@@ -36,9 +37,11 @@ public class AddActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(AddActivity.this);
-                myDB.addBook(title_input.getText().toString().trim(),
-                        author_input.getText().toString().trim(),
-                        Integer.valueOf(pages_input.getText().toString().trim()));
+                myDB.addPatient(tfName.getText().toString().trim(),
+                        tfAge.getText().toString().trim(),
+                        tfGender.getText().toString().trim(),
+                        tfCondition.getText().toString().trim(),
+                        userpassed.username);
                 Intent intent = new Intent(AddActivity.this, Dashboard_Act.class);
                 intent.putExtra("object", userpassed);
                 startActivity(intent);
