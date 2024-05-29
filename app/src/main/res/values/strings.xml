@@ -22,6 +22,7 @@
     <string name="bloodType">Blood Type</string>
     <string name="medicalHistory">Medical History</string>
     <string name="allergies">Allergies</string>
+    <string name="genderMale">Male</string>
 
     <string name="submit">Submit</string>
 
@@ -82,6 +83,7 @@
     <string name="patientName2">Jeffrey Dahmer</string>
     <string name="patientName3">Osama Bin Laden</string>
     <string name="patientName4">Cardo Dalisay</string>
+    <string name="patient01">Patient</string>
 
     <string name="condition1">Has been diagnosed with hypertension, a condition characterized by high blood pressure that can increase the risk of heart disease and stroke.</string>
     <string name="condition2">Struggles with asthma, a chronic respiratory condition that causes difficulty in breathing due to inflamed airways, often triggered by allergens or exercise.</string>
@@ -111,11 +113,18 @@
     <string name="selectPatient">Select Patients: </string>
 
     <string name="userProfile">Your Profile: </string>
+    <string name="createProfile">Create Your Profile: </string>
     <string name="user">Username: </string>
     <string name="fname">First name: </string>
     <string name="mname">Middle name: </string>
     <string name="lname">Last name: </string>
     <string name="bdate">Birth Date: </string>
     <string name="specializationProfile">Specialization: </string>
+
+    <string name="viewPatients">View Patients </string>
+    <string name="news1">New Covid Case Real??? </string>
+    <string name="news2">Pertussis Cases in Mandaue ON THE RISE </string>
+    <string name="news3">Cebuanos told to brace for high heat index of 43°C </string>
+    <string name="news4">Coronavirus Death Toll 7,010,681 deaths </string>
 
 </resources>

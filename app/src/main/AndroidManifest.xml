@@ -13,12 +13,17 @@
         android:theme="@style/Theme.RawDB"
         tools:targetApi="31">
         <activity
+            android:name=".Notifications"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterForm"
+            android:exported="false" />
+        <activity
             android:name=".Login_RegisterAct"
             android:exported="false" />
         <activity
             android:name=".Dashboard_Act"
             android:exported="false" />
-
         <activity
             android:name=".ViewPatientActivity"
             android:exported="false" />
