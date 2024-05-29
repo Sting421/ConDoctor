@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class ViewPatientActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    FloatingActionButton add_button, refreshBtn, backBtn;
+    FloatingActionButton backBtn;
     ImageView empty_imageview;
     TextView no_data;
     int curCount = 0;
@@ -44,34 +44,12 @@ public class ViewPatientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_patient);
 
         recyclerView = findViewById(R.id.recyclerView);
-        add_button = findViewById(R.id.add_button);
         empty_imageview = findViewById(R.id.empty_imageview);
         no_data = findViewById(R.id.no_data);
         backBtn = findViewById(R.id.backBtn);
         Intent myIntent = getIntent();
          userpassed = (User) myIntent.getSerializableExtra("object");
 
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ViewPatientActivity.this, AddActivity.class);
-                intent.putExtra("object", userpassed);
-                startActivity(intent);
-            }
-        });
-
-
-
-        refreshBtn = findViewById(R.id.refreshBtn);
-        refreshBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                storeDataInArrays();
-                recyclerView.setAdapter(customAdapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(ViewPatientActivity.this));
-
-            }
-        });
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -47,7 +47,7 @@ public class UpdateActivity extends AppCompatActivity {
                 title = title_input.getText().toString().trim();
                 author = author_input.getText().toString().trim();
                 pages = pages_input.getText().toString().trim();
-                myDB.updateData(id, title, author, pages);
+                myDB.updateData(id, title, author, pages, condition);
                 finish();
             }
         });
@@ -74,6 +74,7 @@ public class UpdateActivity extends AppCompatActivity {
             title_input.setText(title);
             author_input.setText(author);
             pages_input.setText(pages);
+
             Log.d("stev", title+" "+author+" "+pages);
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
