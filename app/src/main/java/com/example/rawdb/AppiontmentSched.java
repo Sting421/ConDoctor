@@ -7,11 +7,7 @@ import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class AppiontmentSched extends AppCompatActivity {
     ImageButton backButton;
@@ -23,6 +19,7 @@ public class AppiontmentSched extends AppCompatActivity {
         setContentView(R.layout.activity_appiontment_sched);
 
         calendarView = findViewById(R.id.calendarView);
+
 
         // Set the calendar to go up to May 30
         long maxDate = new java.util.GregorianCalendar(2024, 4, 30).getTimeInMillis();
@@ -41,7 +38,7 @@ public class AppiontmentSched extends AppCompatActivity {
                 if (year == 2024 && month == 4) { // May
                     switch (dayOfMonth) {
                         case 2:
-                            dayOfMonth.setText(Red);
+
                             showToast("Checkup with patient #1");
                             break;
                         case 7:

@@ -53,7 +53,11 @@ public class PrivateMessage extends AppCompatActivity {
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(PrivateMessage.this);
 
-                if(myDB.userChecker(doctorName.getText().toString())){
+                if(doctorName.getText().toString().equals(userpassed.getUsername())){
+                    Toast.makeText(PrivateMessage.this, "You cannot write a message to yourself", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(myDB.userChecker(doctorName.getText().toString())){
                     Intent intent = new Intent(PrivateMessage.this, Dashboard_Act.class);
                     intent.putExtra("object", userpassed);
 
