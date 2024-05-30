@@ -2,7 +2,7 @@
     <string name="app_name">RegisterPage</string>
 
     <string name="registerAsPatient">Register as Patient</string>
-    <string name="firstName">First Name</string>
+    <string name="firstName">Full Name</string>
     <string name="lastName">Last Name</string>
     <string name="middleName">Middle Name</string>
     <string name="dateOfBirth">Date of Birth</string>
@@ -115,7 +115,7 @@
     <string name="userProfile">Your Profile: </string>
     <string name="createProfile">Create Your Profile: </string>
     <string name="user">Username: </string>
-    <string name="fname">First name: </string>
+    <string name="fname">Full Name: </string>
     <string name="mname">Middle name: </string>
     <string name="lname">Last name: </string>
     <string name="bdate">Birth Date: </string>

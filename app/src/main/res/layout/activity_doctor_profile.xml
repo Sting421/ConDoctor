@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".DoctorProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -25,7 +25,7 @@
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26999998"
+            app:layout_constraintVertical_bias="0.50"
             app:srcCompat="@drawable/bluebg" />
 
         <TextClock
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout01"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -67,7 +67,7 @@
                     <ImageButton
                         android:id="@+id/imageButton2"
                         android:layout_width="20dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@android:color/transparent" />
 
@@ -111,7 +111,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/proUsername"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -135,62 +135,12 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/proFullname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:hint="@string/firstName"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="@string/mname"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:hint="@string/middleName"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="@string/lname"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textView29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:hint="@string/lastName"
                         android:textSize="20sp" />
                 </LinearLayout>
 
@@ -210,7 +160,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/textView31"
+                        android:id="@+id/proDOB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -235,7 +185,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/textView33"
+                        android:id="@+id/proSpecialization"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

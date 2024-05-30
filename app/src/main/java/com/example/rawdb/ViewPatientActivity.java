@@ -56,7 +56,7 @@ public class ViewPatientActivity extends AppCompatActivity {
             public void onClick(View view) {
                Intent intent = new Intent(ViewPatientActivity.this, Dashboard_Act.class);
                 intent.putExtra("object", userpassed);
-                userpassed.testUserMethod(ViewPatientActivity.this, userpassed.username);
+             //   userpassed.testUserMethod(ViewPatientActivity.this, userpassed.username);
                 startActivity(intent);
             }
         });
@@ -132,7 +132,7 @@ public class ViewPatientActivity extends AppCompatActivity {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(ViewPatientActivity.this);
                 myDB.deleteAllData();
                 //Refresh Activity
-                Intent intent = new Intent(ViewPatientActivity.this, MainActivity.class);
+                Intent intent = new Intent(ViewPatientActivity.this, ViewPatientActivity.class);
                 startActivity(intent);
                 finish();
             }

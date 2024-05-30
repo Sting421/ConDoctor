@@ -16,13 +16,13 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public void testUserMethod(Context context){
-        Toast.makeText(context, "Invalid Username or Password!", Toast.LENGTH_SHORT).show();
-    }
-    public void testUserMethod(Context context, String text){
-        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
-    }
-
+//    public void testUserMethod(Context context){
+//        Toast.makeText(context, "Invalid Username or Password!", Toast.LENGTH_SHORT).show();
+//    }
+//    public void testUserMethod(Context context, String text){
+//        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+//    }
+//
 
 
 

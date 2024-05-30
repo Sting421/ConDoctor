@@ -30,31 +30,41 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/title_input2"
+            android:id="@+id/upName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:ems="10"
-            android:hint="Book Title"
+            android:hint="Name"
             android:inputType="textPersonName" />
 
+
         <EditText
-            android:id="@+id/author_input2"
+            android:id="@+id/upAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:hint="Book Author"
+            android:hint="Age"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/pages_input2"
+            android:id="@+id/upGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:hint="Number of pages"
-            android:inputType="number" />
+            android:hint="Gender"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/upCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Condition"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/update_button"

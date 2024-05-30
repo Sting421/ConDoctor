@@ -53,12 +53,14 @@
             app:layout_constraintVertical_bias="0.05">
 
             <ImageButton
-                android:id="@+id/calendarButton"
-                android:layout_width="wrap_content"
+                android:id="@+id/profileButton"
+                android:layout_width="96dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-
-                app:srcCompat="@drawable/calendar_small" />
+                android:paddingLeft="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/doctorprofile" />
 
             <Space
                 android:layout_width="300dp"

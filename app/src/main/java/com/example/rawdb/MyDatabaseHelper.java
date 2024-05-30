@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 
@@ -116,13 +115,23 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
+    Cursor readProfile(String username) {
+        String query = "SELECT * FROM " + DOCTORS_DATA + " WHERE " + COLUMN_USERNAME + " = ?";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(query, new String[]{username});
+        }
+        return cursor;
+    }
 
 
 
-    void updateData(String row_id, String author, String gender, String condiiton){
+    void updateData(String row_id,String name, String age, String gender, String condiiton){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(Patient_Age, author);
+        cv.put(Patient_Age, age);
         cv.put(Patient_gender, gender);
         cv.put(Patient_condition, condiiton);
 

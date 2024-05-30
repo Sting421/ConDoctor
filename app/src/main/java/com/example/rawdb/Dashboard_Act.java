@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Dashboard_Act extends AppCompatActivity {
-    ImageButton patientList;
+    ImageButton patientList, doctorsProfile;
     Button ViewerBtn;
     TextView patientCount, welcomeText;
 
@@ -38,11 +38,12 @@ public class Dashboard_Act extends AppCompatActivity {
         myDB = new MyDatabaseHelper(Dashboard_Act.this);
         patientList = findViewById(R.id.viewPatientsBtn);
         ViewerBtn = findViewById(R.id.ViewerBtn);
+        doctorsProfile = findViewById(R.id.profileButton);
 
         Intent myIntent = getIntent();
         User userpassed = (User) myIntent.getSerializableExtra("object");
 
-        userpassed.testUserMethod(this);
+        //userpassed.testUserMethod(this);
         doctorname = userpassed.getUsername();
 
 
@@ -64,6 +65,16 @@ public class Dashboard_Act extends AppCompatActivity {
             }
 
 
+        });
+
+        doctorsProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard_Act.this, DoctorProfile.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+                finish();
+            }
         });
         ViewerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
