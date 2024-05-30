@@ -65,11 +65,13 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="20dp"
-                        android:layout_height="match_parent"
+                        android:id="@+id/backButton"
+                        android:layout_width="7dp"
+                        android:layout_height="66dp"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent" />
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/backbutton" />
 
                     <Space
                         android:layout_width="295dp"

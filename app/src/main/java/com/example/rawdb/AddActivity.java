@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -15,6 +16,7 @@ public class AddActivity extends AppCompatActivity {
 
     EditText tfName, tfAge, tfGender,tfCondition;
     Button add_button;
+    ImageButton addBcakButton;
     MainActivity main;
 
 
@@ -28,6 +30,8 @@ public class AddActivity extends AppCompatActivity {
         tfGender = findViewById(R.id.tfGender);
         tfCondition = findViewById(R.id.tfCondition);
         add_button = findViewById(R.id.add_button);
+
+        addBcakButton = findViewById(R.id.addBackBtn);
 
         Intent myIntent = getIntent();
         User userpassed = (User) myIntent.getSerializableExtra("object");
@@ -50,6 +54,17 @@ public class AddActivity extends AppCompatActivity {
 
             }
 
+        });
+        addBcakButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddActivity.this, Dashboard_Act.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+
+                finish();
+
+            }
 
         });
     }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class DoctorProfile extends AppCompatActivity {
     MyDatabaseHelper myDB;
 
     TextView username, fullname, specialization,DOB;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,23 @@ public class DoctorProfile extends AppCompatActivity {
         fullname = findViewById(R.id.proFullname);
         DOB = findViewById(R.id.proDOB);
         specialization = findViewById(R.id.proSpecialization);
-
+        backButton = findViewById(R.id.backButton);
 
 
         storeDataInArrays();
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DoctorProfile.this, Dashboard_Act.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+                finish();
+
+            }
+
+
+        });
 
     }
     void storeDataInArrays(){
