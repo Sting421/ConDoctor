@@ -183,6 +183,15 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return exists;
     }
+    boolean userChecker(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT username FROM " + DOCTORS_DATA + " WHERE username = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{username});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
     boolean patientChecker(String name, String doctorName) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = null;

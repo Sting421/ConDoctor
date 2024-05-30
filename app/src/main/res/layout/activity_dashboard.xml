@@ -201,15 +201,16 @@
                         android:background="@android:color/transparent"
                         app:srcCompat="@drawable/appointment" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/privatemessage" />
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <ImageButton
+                android:id="@+id/privateMessageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/privatemessage" />
         </LinearLayout>
 
         <LinearLayout

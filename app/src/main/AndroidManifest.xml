@@ -13,6 +13,12 @@
         android:theme="@style/Theme.RawDB"
         tools:targetApi="31">
         <activity
+            android:name=".PrivateMessage"
+            android:exported="false" />
+        <activity
+            android:name=".AppiontmentSched"
+            android:exported="false" />
+        <activity
             android:name=".Prescription"
             android:exported="false" />
         <activity
