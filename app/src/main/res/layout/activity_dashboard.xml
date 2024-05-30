@@ -194,8 +194,8 @@
                         app:srcCompat="@drawable/prescription" />
 
                     <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/apointSchedBtn"
+                        android:layout_width="149dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"

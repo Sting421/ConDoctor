@@ -1,7 +1,10 @@
 package com.example.rawdb;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CalendarView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -11,19 +14,24 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class AppiontmentSched extends AppCompatActivity {
-
+    ImageButton backButton;
     private CalendarView calendarView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_appiontment_sched);
 
         calendarView = findViewById(R.id.calendarView);
 
         // Set the calendar to go up to May 30
         long maxDate = new java.util.GregorianCalendar(2024, 4, 30).getTimeInMillis();
         calendarView.setMaxDate(maxDate);
+
+        Intent myIntent = getIntent();
+        User userpassed = (User) myIntent.getSerializableExtra("object");
+
+        backButton = findViewById(R.id.appointBackBtn);
 
         // Set up the date change listener
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -33,6 +41,7 @@ public class AppiontmentSched extends AppCompatActivity {
                 if (year == 2024 && month == 4) { // May
                     switch (dayOfMonth) {
                         case 2:
+                            dayOfMonth.setText(Red);
                             showToast("Checkup with patient #1");
                             break;
                         case 7:
@@ -47,6 +56,19 @@ public class AppiontmentSched extends AppCompatActivity {
                     }
                 }
             }
+        });
+
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AppiontmentSched.this, Dashboard_Act.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+                finish();
+            }
+
+
         });
     }
 

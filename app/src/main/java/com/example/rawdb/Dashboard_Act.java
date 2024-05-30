@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Dashboard_Act extends AppCompatActivity {
-    ImageButton patientList, doctorsProfile, dashPrescription, privateMessageBtn;
+    ImageButton patientList, doctorsProfile, dashPrescription, privateMessageBtn, apointSchedBtn;
     Button ViewerBtn;
     TextView patientCount, welcomeText;
 
@@ -42,6 +42,7 @@ public class Dashboard_Act extends AppCompatActivity {
         dashPrescription = findViewById(R.id.dashPrescription);
 
         privateMessageBtn = findViewById(R.id.privateMessageBtn);
+        apointSchedBtn = findViewById(R.id.apointSchedBtn);
 
 
         Intent myIntent = getIntent();
@@ -86,6 +87,18 @@ public class Dashboard_Act extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Dashboard_Act.this, PrivateMessage.class);
+                intent.putExtra("object", userpassed);
+                startActivity(intent);
+                finish();
+
+            }
+
+
+        });
+        apointSchedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard_Act.this, AppiontmentSched.class);
                 intent.putExtra("object", userpassed);
                 startActivity(intent);
                 finish();
